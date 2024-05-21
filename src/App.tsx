@@ -16,12 +16,12 @@ function App() {
 
     return (
         <ul>
-            {money.map((object, index) => {
+            {money.map((objFromMoneyArr, index) => {
                 return (
                     <li key={index}>
-                        <span>{object.banknots} -</span>
-                        <span>{object.value} -</span>
-                        <span>{object.number}</span>
+                        <span>{objFromMoneyArr.banknots} -</span>
+                        <span>{objFromMoneyArr.value} -</span>
+                        <span>{objFromMoneyArr.number}</span>
                     </li>
                 )
             })}
