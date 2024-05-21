@@ -18,7 +18,7 @@ function App() {
         <ul>
             {money.map((object, index) => {
                 return (
-                    <li>
+                    <li key={index}>
                         <span>{object.banknots} -</span>
                         <span>{object.value} -</span>
                         <span>{object.number}</span>
