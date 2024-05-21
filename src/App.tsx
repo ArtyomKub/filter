@@ -17,8 +17,12 @@ function App() {
 
     let currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === 'RUBLS')
 
+    const onClickHandler = () => {
+
+    }
+
     return (
-        <div>
+        <>
             <ul>
                 {currentMoney.map((object, index) => {
                     return (
@@ -30,10 +34,12 @@ function App() {
                     )
                 })}
             </ul>
-            <button>Dollars</button>
-            <button>Rubles</button>
-            <button>Reset</button>
-        </div>
+            <div style={{marginLeft: '35px'}}>
+                <button onClick={onClickHandler}>ALL</button>
+                <button onClick={onClickHandler}>DOLLARS</button>
+                <button onClick={onClickHandler}>RUBLES</button>
+            </div>
+        </>
 
     );
 }
