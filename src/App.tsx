@@ -14,14 +14,17 @@ function App() {
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
 
+
+    let currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === 'RUBLS')
+
     return (
         <ul>
-            {money.map((objFromMoneyArr, index) => {
+            {currentMoney.map((object, index) => {
                 return (
                     <li key={index}>
-                        <span>{objFromMoneyArr.banknots} -</span>
-                        <span>{objFromMoneyArr.value} -</span>
-                        <span>{objFromMoneyArr.number}</span>
+                        <span>{object.banknots} -</span>
+                        <span>{object.value} -</span>
+                        <span>{object.number}</span>
                     </li>
                 )
             })}
